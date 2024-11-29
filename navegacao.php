@@ -34,10 +34,16 @@ include_once('verificar_sessao.php');
                     <?php
                     }
                     ?>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="criar_topico.php">Criar tópico</a>
-                    </li>
+                     
+                    <?php
+                    if ($_SESSION['tipo'] == 0 || $_SESSION['tipo'] == 1) {
+                    ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="criar_topico.php">Criar tópico</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link active" href="topicos.php">Ver tópicos</a>
                     </li>
