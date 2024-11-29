@@ -1,5 +1,6 @@
 <?php
     include_once('verificar_sessao.php');
+    include_once('bd.php');
 ?>
 <nav class="navbar bg-navegacao rounded">
     <div class="container-fluid">
@@ -18,7 +19,7 @@
                     <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                 </form>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" <?php echo ($_SESSION['tipo'] != 0) ? 'hidden' : ''; ?>>
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                             Administração
                         </a>
